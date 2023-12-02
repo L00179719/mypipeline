@@ -10,7 +10,7 @@ pipeline {
         appRegistry = "116594513860.dkr.ecr.us-east-1.amazonaws.com/l00179719apprep"
         vprofileRegistry = "https://116594513860.dkr.ecr.us-east-1.amazonaws.com/"
         //cluster = "l00179719appcluster"
-        //service = "l00179719appservice"
+        //service = "l00179719appser"
         
     }
   stages {
