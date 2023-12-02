@@ -1,0 +1,127 @@
+body{
+	
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	background-color:#f1f8e9;
+}
+.a-Banner {
+	background-image: url(../images/quad1.jpg);
+	height:70vh;
+	width:100%;
+	-webkit-background-size:cover;
+	background-size:cover;                            /*image, decoration and flex*/
+	background-position:center center;
+	background-repeat:no-repeat;               
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -0-flex;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow:column;
+    border-top: 6px solid #daad86;
+	border-bottom: 6px solid #daad86;
+	
+}	
+.mainTitle{                      /*banner text*/
+	font-size:50px;
+	font-weight: 700;
+	margin:0;
+	letter-spacing:3px;
+	color:#fff;
+	text-align:center;
+	
+	
+}
+
+.a-Banner  h1{
+	font-size:50px;
+	font-family:cursive;
+}
+.a-Banner  p{
+	color:#fff;
+}
+.a-Banner  a{
+	text-decoration:none;
+	color:#daad86;
+}
+.a-Banner  a:hover{                    /*text decoration*/
+	color:#b7ffbf;
+}
+main {   
+	display:flex;
+	justify-content: center;
+	align-items:center;
+     min-height:50vh;
+	
+	
+	
+}
+.container{
+	position:relative;
+	width: 1200px;
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	flex-wrap:wrap;
+	
+}
+.container .card{
+	position: relative;
+	max-width:450px;
+	margin:10px;
+	padding:15px;
+	display:flex;
+	border:3px  double #daad86;
+	border-radius:24px;
+	
+}
+
+.container .card .imgBx{
+	max-width:150px;
+	flex:0 0 150px;
+}
+.container .card .imgBx img{
+	max-width:100%;
+	border-radius:14px;
+}
+.container .card .content{
+	margin-left:20px;
+	
+}
+.container p{
+	font-size:18px;
+	text-align:center;
+}
+
+
+
+@media (max-width:991px){
+	
+	.container {
+		flex-direction: column;
+	}
+}
+@media (max-width:768px){
+	
+	.container {
+		flex-direction: column;
+	}
+	.container .card {
+		flex-direction: column;
+		max-width:350px;
+	}
+	.container .card .imgBx{
+		
+		max-width:100%;
+	}
+	.container .card .content{
+		
+		margin-left:20px;
+	}
+	.a-Banner  p{
+		text-align:center;
+	}
+}

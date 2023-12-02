@@ -1,0 +1,270 @@
+body{
+	
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	
+}
+header{
+	background:#262626;
+	border-top: 1px solid #daad86;
+	
+	
+}
+ul{
+	list-style-type:none;           /* unordered list */
+}
+ul a{
+	color: #daad86;
+	text-decoration:none;    /*anchor tag color and text-decoration*/
+
+}
+.item a:hover{   /*middle nav buttons*/
+	
+	background-color:#4b6d72;   /* cursor hoover*/
+	text-decoration:none;
+	border: 6px solid transparent;
+	border-radius:6px;
+	color:#000
+	
+}
+/*.item a:visited{   color:#fffdd0;      }  */                  /*page visited */
+
+
+
+
+.menu li{                           /* nav bar buttons size and padding */
+	font-size:16px;
+	padding: 15px 50px;
+	
+}
+
+
+}
+.menu li a{
+	display: block;                          /* nav bar buttons border and display type */
+     border:1px transparent;
+}
+#active a {
+	background:#4b6d72;
+    border:12px solid transparent;      /*ID active page style*/
+	border-radius: 12px;
+}
+
+
+
+
+.logo a {
+	font-size:34px;
+	border:1.5px solid #daad86 ;       /*logo size and decoration*/
+	border-radius: 8px;
+	font-family:Italic;
+	color:#daad86
+	
+}
+
+
+
+/* make header responsive*/
+
+ 
+
+.menu{
+	
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items:center;
+	
+	
+}
+
+.toggle{
+	order:1;          
+}
+
+.item{
+	width:100%;
+	text-align:center;    /*mobile version actions*/
+	order:;
+	display:none;
+}
+.item.active{
+	display:block;
+}
+.toggle{
+	cursor:pointer;
+}
+.button a {
+	display:inline-block;     /*icons */
+	color:#fff;
+}
+
+.logo a{
+	text-align:center;
+}
+.bars{
+	background:#fff;
+	display: inline-block;             /*menu bar*/
+	height:2.5px;
+	position:relative;
+	width:18px;
+}
+.bars::before,.bars::after{
+	background:#fff;
+	content:"";
+	display: inline-block;
+	height:2.5px;
+	position:absolute;
+	width:18px;
+	
+}
+.bars::before{
+	top:5px;
+}
+.bars::after{
+	top:-5px;
+}
+footer{
+	display: -webkit-flex;                  /*responsive footer */
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -0-flex;
+	display: flex;
+	flex-flow: row wrap;                  /*wrap items*/
+	background:#262626;
+	padding:20px 40px;
+	color:#daad86;
+	
+}
+
+.footer > *{
+	flex: 1 100%;
+	                                    
+}
+.l-footer{
+	margin-right:1.25em;
+	margin-bottom:2em;
+}
+.l-footer p{
+	padding-top:10px;
+}
+
+
+
+h1 a{
+	padding-left:20px;
+}
+footer h2{
+	font-weight: 900;
+	font-size:14px;
+	
+	
+}
+
+.footer ul{
+	list-style:none;
+	padding-left:0;
+	
+}
+
+.footer li{
+	line-height: 2em;
+	font-size:12px;
+}
+
+.footer a{
+	text-decoration: none;
+	color:#blue;
+}
+.r-footer{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -0-flex;
+	display: flex;
+	flex-flow: row wrap;
+
+ }
+ 
+ .r-footer p{
+	 color: #999;
+ }
+ .r-footer > *{
+	 
+	 flex: 1 50%;
+	 margin-right:1.25em;
+ }
+ .box a{
+	text-decoration:none;                /*links decoration*/
+    color:#999;	
+ }
+ 	 
+
+ 
+ .b-footer{
+	 text-align: center;
+	 color:#999;                        /*bottom footer*/
+	 padding-top: 50px;
+	 font-size:12px;
+ }  
+ .l-footer p{
+	 padding-right:20%;
+	 color: #999;
+ }
+
+
+
+@media all and (min-width:768px){
+	.item{                               /*pc version actions after 768 px*/
+		display:inline-block;
+		width:60px;
+		
+	}
+	.toggle{
+		display:none;
+	}
+	.logo{
+		order:0;                        /*button links order*/
+	}
+	
+	.menu li{
+		padding:15px 15px;
+	}
+	.button{
+		
+		order:2;
+	}
+	 .r-footer > * {
+		 flex:1;
+	 }
+	 .l-footer{
+		 flex: 1 0px;
+	 }
+	 .r-footer{
+		 flex:2 0px;
+	 }
+	
+	 
+	
+}
+
+.select-lang{
+	cursor:pointer;
+	
+	
+		
+}
+.select-lang:before{
+	content:'';
+	display:block;
+	width:32px;
+	height:32px;
+	background-image:url("https://www.countryflags.io/ro/flat/32.png");
+	
+}
+
+
+	
+
+	

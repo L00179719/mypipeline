@@ -1,25 +1,25 @@
 <!doctype html>
-<html>             <!-- create html -->
+<html> 
 <head>
 <html lang = "en">
 <meta charset ="utf-8">
 
-<meta name="viewport" content ="width=device-width, initial-scale=1">   <!--code for media queries-->
+<meta name="viewport" content ="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="description" 
 content="Best ski to door access hotel in Predeal. Frent House Hotel is located on the Clabucet ski slope Predeal. Free Wifi, free parking, breakfast included, Ski and Snowboard rental center">
 
 
-<title> Ski to door access hotel in Predeal Brasov- Casa Frent</title>    
- <!-- css imported for header-footer, fontawesome icons, home page main content -->
+<title> Ski to door access hotel in Predeal Brasov- Casa Frent</title>
+
+
+
 </head>
 <style> 
-  
-@import "css/header-footerro.css"; 
-@import "css/all.css";              
-@import "css/home.css";           
+@import "css/header-footerro.css";
+@import "css/all.css";
+@import "css/contact.css";
 
-        
 
 </style>
 
@@ -27,101 +27,78 @@ content="Best ski to door access hotel in Predeal. Frent House Hotel is located 
 
 <body>
 <header>
-<nav>                         
-<!-- header navbar fully responsive with code for menu on mobile version -->
+<nav>
+
   <ul class="menu">
    <li class="logo" ><a href="index.html">Casa Frent</a></li>
-	<li class="item"  id="active"><a href="index.html"  i class="fas fa-home"></a></i></li>
+	<li class="item"><a href="index.html"  i class="fas fa-home"></a></i></li>
 	<li class="item"><a href="rooms.html">Rooms</a></li>
 	<li class="item"><a href="everski.html">Everski</a></li>
 	<li class="item"><a href="reservations.html">Reservations</a></li>
 	<li class="item"><a href="gallery.html">Gallery</a></li>
 	<li class="item"><a href="activities.html">Activities</a></li>
 	<li class="item"><a href="discover.html">Discover</a></li>
-	<li class="item"><a href="contact.html">Contact</a></li>    <!-- anchor tags and icons  -->                 
+	<li class="item"  id="active" ><a href="contact.html">Contact</a></li>    <!-- anchor tags and icons  -->                 
 	<li class="button"><a href="https://www.facebook.com/search/top?q=casa%20fren%C8%9B" i class="fab fa-facebook-f"></a></i></li>
 	<li class="button"><a href="tel:+40733255677" ><i class="fas fa-phone"></a></i></li>
-	<li ><a href="indexro.html" class="select-lang"></a></li>    <!-- language flag  -->
+	<li ><a href="contactro.html" class="select-lang"></a></li>    <!-- language flag  -->
 	
     <li class="toggle"><span class="bars"></span></li>         <!-- menu bar for mobile size  -->
   </ul>	
+
 
 </nav>
 
 
 
-
+</header>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-$('.toggle').click(function(){                            <!-- little code for menu bar  -->
+$('.toggle').click(function(){
 $('.item').toggleClass('active')
 })
 })
 </script>
 
-<div class="homebanner">                         
-                                             <!-- banner image with title and text  -->
-<h1 class ="mainTitle">FRENT HOUSE</h1>
-<p><strong>In the heart of  the Carpathians</strong></p>           
-<a href="reservations.html">Book now</a>
+<main class="contactPage">
+<div class ="mainTitle">
+<h1>FRENT HOUSE</h1>            <!-- title-->
+<h2>Contact Form</h2>
+<br>
+
+ <!-- icon links to map,phone, facebook  -->
+
+<a href="tel:0721661122" ><i class="fas fa-phone"></i></a></li>
+<a href="https://www.facebook.com/search/top?q=casa%20fren%C8%9B"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.google.com/maps/place/Casa+Frent/@45.4995787,25.5762853,17z/data=!3m1!4b1!4m8!3m7!1s0x40b341d1cabefe9b:0x1f7783a39d3fec9f!5m2!4m1!1i2!8m2!3d45.499575!4d25.578474"><i class="fas fa-map-marker-alt"></i></a>
 
 
+
+	
+
+
+
+
+</div>                                               <!-- contact form with different inputs and placeholders-->
+<div class="contact-form">
+<form id="contact-form" method="post" action="contact.php">
+
+<input type="text" name="name" class="form-form" placeholder="name" required>
+<br>
+<input type="email" name="email" class="form-form" placeholder="email" required>
+<br>
+<input type="tel" name="phone" class="form-form" placeholder="phone" required>
+<br>
+<input type="text" name="subject" class="form-form" placeholder="subject">
+<br>
+<input type="text" name="message" class="form-form" placeholder="message" required>
+<br>
+<input type="submit" class="form-form submit"  value="SEND MESSAGE" ><br>
+
+
+</form>
 </div>
-
-</header>
-<main>
-
-<div class="container">
-  <div class="card" a href="gallery.html"></a>
-    <div class="imgBx">                                      <!-- container and 4 boxes with images and text  -->
-	  <img src="images/1.jpg">
-	</div>
-	<div class="content">
-    <h2>About</h2>
-  <p> Surrounded by the Carpathian Mountains right on the Clabucet ski slope Predeal,
-  Frent House is offering the ideal place to enjoy summer & winter holidays </p>
-<a href="gallery.html">More photos</a>                      <!-- link button  to gallery page -->
-     </div>
-    </div>
-	<div class="card">  <!-- use of class card for easier formating in css  -->
-    <div class="imgBx">                           
-
-	  <img src="images/2.jpg">
-	</div>
-	<div class="content">
-    <h2>Rooms</h2>
-  <p> 
-  Quality rooms with balcony and breakfast included
-</p><br><br><br>
-<a href="roomsro.html">Details</a>
-     </div>
-    </div>
-	<div class="card">
-    <div class="imgBx">
-	  <img src="images/5.jpg">
-	</div>
-	<div class="content">
-    <h2>Everski</h2>
-  <p> Rent Skis, Snowboards & Sleds from Everski center
-</p><br><br><br>
-<a href="everski.html">Details</a>
-     </div>                                 
-    </div>                                                                  
-	<div class="card">
-    <div class="imgBx">
-	  <img src="images/11.jpg">
-	</div>
-	<div class="content">
-    <h2>Discover</h2>
-  <p> Discover the surroundings at a short distance from Frent House
-<br><br><br><br>  </p>
-<a href="discover.html">Details</a>
-     </div>
-    </div>
-
-
-
 </main>
 
 <footer class ="footer">
@@ -163,5 +140,5 @@ $('.item').toggleClass('active')
 </footer>
 </body>
 
-               
-</html>  !-- end html page -->
+
+</html>

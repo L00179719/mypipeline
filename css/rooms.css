@@ -1,0 +1,85 @@
+body{
+	
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	background-color:#f1f8e9;
+}
+#container     /*main container responsive*/
+{   
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;                      
+	display: -0-flex;
+	display: flex;
+	font-family: sans-serif;
+	text-align:center;
+                           /*style*/
+	padding:10% 10%;
+	margin:0px;
+	margin-top:0px;
+	min-height:400px;
+	
+	border-bottom: 6px solid #daad86;
+}
+header{
+	border-bottom: 6px solid #daad86;
+}
+section /*index text page and links*/
+{
+	
+	display:-webkit-flex:1 0 200px;          
+	flex: 1 0 200px;
+	font-style:italic;                       /*flex and style 1st section*/
+	font-size:1.2em;
+	font-weight:100;
+	
+}
+
+
+section i{
+	padding :10px;
+}
+
+section p{
+	line-height:28pt;
+}
+
+ section a{ 
+
+	 font-size:13px;
+	text-transform:uppercase;         /*book now button */
+	text-decoration:none;
+	color:#fff;
+	background:#262626;
+	padding: 10px 30px;
+	margin-top: 10px;
+	border-radius:6px;
+}
+section a:hover{
+	background:#4b6d72;
+}
+img{
+	width:40%;
+	height:40%;
+	border:1px solid #262626;
+	border-radius:15px;
+}
+  section ul li {
+	 
+	display: block;
+	padding:10px;
+	color:#262626;
+}
+
+@media all and (max-width:768px){   /*responsive for phone/tablet view*/
+	
+	#container{
+		flex-direction:column;
+	
+	}
+	aside img{
+    width:100%;
+}
+	
+}
