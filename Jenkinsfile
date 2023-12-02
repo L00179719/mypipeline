@@ -16,7 +16,7 @@ pipeline {
   stages {
     stage('Fetch Git code'){
       steps {
-        git branch: 'docker', url: 'https://github.com/L00179719/mypipeline.git'
+        git branch: 'main', url: 'https://github.com/L00179719/mypipeline.git'
       }
     }
 
