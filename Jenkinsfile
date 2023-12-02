@@ -9,8 +9,8 @@ pipeline {
         registryCredential = 'ecr:us-east-1:awscreds'
         appRegistry = "116594513860.dkr.ecr.us-east-1.amazonaws.com/l00179719apprep"
         vprofileRegistry = "https://116594513860.dkr.ecr.us-east-1.amazonaws.com/"
-        //cluster = "l00179719cluster"
-        //service = "l00179719service"
+        cluster = "l00179719cluster"
+        service = "l00179719svc"
         
     }
   stages {
@@ -60,8 +60,15 @@ pipeline {
             }
           }
         }
-    
-    }    
+    stage('Deploy to ecs') {
+          steps {
+        withAWS(credentials: 'awscreds', region: 'us-east-1') {
+          sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
+        }
+      }
+     }
+    }
+       
 
     
      
