@@ -1,6 +1,6 @@
 # Use a base image with a web server, for example, Nginx
 FROM nginx:latest
-RUN mvn install
+
 
 # Copy your index.html to the default Nginx web root directory
 COPY index.html /usr/share/nginx/html/
