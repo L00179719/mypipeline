@@ -1,5 +1,5 @@
 # Use a base image with a web server, for example, Nginx
-FROM L00179719/mypipeline
+FROM l00179719/mypipeline
 LABEL "Author"="Adrian"
 RUN apt update
 RUN apt install apache2 -y && apt install git -y
