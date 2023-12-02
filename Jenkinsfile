@@ -16,7 +16,7 @@ pipeline {
   stages {
     stage('Fetch Git code'){
       steps {
-        git branch: 'main', url: 'https://github.com/L00179719/mypipeline.git'
+        git url: 'https://github.com/L00179719/mypipeline.git'
       }
     }
 
@@ -43,7 +43,7 @@ pipeline {
        steps {
        
          script {
-                dockerImage = docker.build( appRegistry + ":$BUILD_NUMBER")
+                dockerImage = docker.build(appRegistry+ ":$BUILD_NUMBER",".")
              }
 
      }
