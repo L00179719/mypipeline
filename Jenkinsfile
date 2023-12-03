@@ -27,19 +27,6 @@ pipeline {
     }
 
 
-    stage('Build code'){   //build code with Maven
-            steps {
-                sh 'mvn install -DskipTests'
-            }
-
-            post {
-                success {
-                    echo 'Archiving artifacts'
-                    archiveArtifacts artifacts: '**/*.war'
-                }
-            }
-        }
-
     stage('Maven Test'){  // Unit Test Maven
       steps {
         sh 'mvn test'
