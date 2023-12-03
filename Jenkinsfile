@@ -13,21 +13,21 @@ pipeline {
 
     environment {
         registryCredential = 'ecr:us-east-1:awscreds'
-        appRegistry = "116594513860.dkr.ecr.us-east-1.amazonaws.com/l00179719apprep"
+        appRegistry = "116594513860.dkr.ecr.us-east-1.amazonaws.com/l00179719apprep"  //ECR image repository
         l00179719Registry = "https://116594513860.dkr.ecr.us-east-1.amazonaws.com/"
-        cluster = "l00179719cluster"
-        service = "l00179719svc"    //service to run the ecs tasks for project
+        cluster = "l00179719cluster"  //aws ECS cluster
+        service = "l00179719svc"    //service to run the ECS tasks for project
         
     }
   stages {
     stage('Fetch Git code'){
       steps {
-        git branch: 'main', url: 'https://github.com/L00179719/mypipeline.git'
+        git branch: 'main', url: 'https://github.com/L00179719/mypipeline.git'  //WEB APP Github Repository
       }
     }
 
 
-    stage('Build code'){
+    stage('Build code'){   //build code with Maven
             steps {
                 sh 'mvn install -DskipTests'
             }
@@ -40,13 +40,13 @@ pipeline {
             }
         }
 
-    stage('Maven Test'){  
+    stage('Maven Test'){  // Unit Test Maven
       steps {
         sh 'mvn test'
       }
     }
 
-    stage ('Code analysis with checkstyle Maven'){
+    stage ('Code analysis with checkstyle Maven'){  //Checking coding standards with Maven
             steps {
                 sh 'mvn checkstyle:checkstyle'
             }
@@ -57,7 +57,7 @@ pipeline {
             }
         }
 
-    stage('Sonar Analysis') {
+    stage('Sonar Analysis') { //checking code quality and code security with Sonarqube
             environment {
                 scannerHome = tool 'sonar4.7'
             }
@@ -76,7 +76,7 @@ pipeline {
         }
 
 
-    stage("Quality Gate") {
+    stage("Quality Gate") {  //Check Sonarqube pass conditions (Bugs greater than 100 will fail the job)
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
                     // Parameter indicates whether to set pipeline to UNSTABLE if Quality Gate fails
@@ -88,7 +88,7 @@ pipeline {
 
 
 
-    stage('Build App Image') {
+    stage('Build App Image') {  //build Docker image 
        steps {
        
          script {
@@ -99,7 +99,7 @@ pipeline {
     
     }
 
-    stage('Upload App Image') {
+    stage('Upload App Image') {  //Upload docker image to ECR repository
           steps{
             script {
               docker.withRegistry( l00179719Registry, registryCredential ) {
@@ -109,7 +109,7 @@ pipeline {
             }
           }
         }
-    stage('Deploy to ecs') {
+    stage('Deploy to ecs') {  //Deploy latest image to ECS Service
           steps {
         withAWS(credentials: 'awscreds', region: 'us-east-1') {
           sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
